@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Health Workshop</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .workshop-section {
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        h1, h2 {
+            color: #4CAF50;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the Virtual Health Workshop</h1>
+    <p>Your health, your priority!</p>
+</header>
+
+<div class="container">
+    <div class="workshop-section">
+        <h2>About the Workshop</h2>
+        <p>This workshop is designed to help you learn essential health tips, practice mindfulness, and adopt healthy habits.</p>
+    </div>
+
+    <div class="workshop-section">
+        <h2>Health Tips</h2>
+        <ul>
+            <li>Stay hydrated and drink at least 2 liters of water daily.</li>
+            <li>Exercise for 30 minutes each day.</li>
+            <li>Maintain a balanced diet rich in fruits and vegetables.</li>
+            <li>Practice mindfulness for stress relief.</li>
+        </ul>
+    </div>
+
+    <div class="workshop-section">
+        <h2>Interactive Activity: Breathing Exercise</h2>
+        <p>Follow along with a simple breathing exercise to relax and refocus.</p>
+        <button id="startExercise">Start Breathing Exercise</button>
+        <div id="exerciseInstructions" class="hidden">
+            <h3>Breathe In... Hold... Breathe Out...</h3>
+            <p>Repeat for 5 cycles. Feel calm and refreshed!</p>
+        </div>
+    </div>
+
+    <div class="workshop-section">
+        <h2>Feedback</h2>
+        <p>What did you think of the workshop?</p>
+        <button onclick="alert('Thank you for your feedback!')">Submit Feedback</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Virtual Health Workshop</p>
+</footer>
+
+<script>
+    // JavaScript for interactivity
+    document.getElementById('startExercise').addEventListener('click', function() {
+        const instructions = document.getElementById('exerciseInstructions');
+        if (instructions.classList.contains('hidden')) {
+            instructions.classList.remove('hidden');
+        } else {
+            instructions.classList.add('hidden');
+        }
+    });
+</script>
+
+</body>
+</html>
